@@ -81,8 +81,10 @@ def response_path(path):
             separator = '\r\n'
             content = f'Directory of {path}:'
 
+            # Display directory contents as vertical item list
             for item in os.listdir(path):
                 content += (separator+item)
+
             content = content.encode()
             mime_type = b"text/plain"
         except FileNotFoundError:
