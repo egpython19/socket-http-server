@@ -127,9 +127,7 @@ def server(log_buffer=sys.stderr):
                 print('request received:\n{}\n\n'.format(request))
 
                 try:
-                    print('*** request: {}'.format(request))
                     path = parse_request(request)
-                    print(path)
                     content, mimetype = response_path(path)
                     response = response_ok(body=content, mimetype=mimetype)
                 except NotImplementedError:
