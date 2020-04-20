@@ -32,7 +32,8 @@ def response_method_not_allowed():
     notice = b'Error: ' + code + b' ' + code_description
     message = b'Only GET methods allowed on this server.'
 
-    return separator.join([response_header + blank_line,
+    return separator.join([response_header
+                           + blank_line,
                            notice,
                            message])
 
@@ -48,7 +49,8 @@ def response_not_found():
     notice = b'Error: ' + code + b' ' + code_description
     message = b'Sorry. Could not find the page you wanted.'
 
-    return separator.join([response_header + blank_line,
+    return separator.join([response_header
+                           + blank_line,
                            notice,
                            message])
 
